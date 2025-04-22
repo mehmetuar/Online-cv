@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mehmet Ucar - Online CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div><strong>Mehmet Ucar</strong></div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="theme-toggle" id="theme-toggle">🌙 Dark Mode</button>
+  </header>
+
+  <a class="cta-cv" href="cv-dosyam.pdf" download>CV Download</a>
+
+  <section id="home" class="section">
+    <div class="profile-wrapper">
+      <img src="foto1 (1).jpg" alt="Profil Fotoğrafı" class="profile-photo">
+  
+      <div class="profile-info">
+        <h1>Mehmet UCAR</h1>
+        <p>Software Engineer</p>
+      </div>
+  
+      <div class="robot-home">
+        <video autoplay loop muted playsinline>
+          <source src="Animation - 1745155253813.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="about" class="section">
+    <h2 class="text-center">About Me</h2>
+    <div class="about-box">
+      <p>Merhaba! Ben Mehmet Uçar. Yazılım mühendisliği 3. sınıf öğrencisiyim ve teknolojiye büyük bir ilgi duyuyorum...</p>
+      <p>Problem çözme yeteneğim, hızlı adaptasyon kabiliyetim ve takım çalışmasına yatkınlığım ile fark yaratmayı hedefliyorum...</p>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <h2 class="text-center">Education</h2>
+    <div class="edu-cards">
+      <div class="edu-card">
+        <i class="fa-solid fa-graduation-cap fa-2x"></i>
+        <h3>Halic University</h3>
+        <p>Software Engineer</p>
+        <p>2022 - Active Student</p>
+      </div>
+      <div class="edu-card">
+        <i class="fa-solid fa-school fa-2x"></i>
+        <h3>Metin Civiler Anadolu High School</h3>
+        <p>2017 - 2021</p>
+        <p>Numerical Section</p>
+      </div>
+      <div class="edu-card">
+        <i class="fa-solid fa-book fa-2x"></i>
+        <h3>Middle School</h3>
+        <p>2012 - 2016</p>
+        <p> - </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2 class="text-center">Skills</h2>
+    <div class="skills-list">
+      <div class="skill"><div class="skill-label">HTML</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="90">%90</div></div></div>
+      <div class="skill"><div class="skill-label">Java</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="85">%85</div></div></div>
+      <div class="skill"><div class="skill-label">CSS</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="85">%85</div></div></div>
+      <div class="skill"><div class="skill-label">JavaScript</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="80">%80</div></div></div>
+      <div class="skill"><div class="skill-label">Python</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="60">%60</div></div></div>
+      <div class="skill"><div class="skill-label">C++</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="60">%60</div></div></div>
+      <div class="skill"><div class="skill-label">Node.js</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="40">%40</div></div></div>
+      <div class="skill"><div class="skill-label">PHP</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="30">%30</div></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="text-center">Contact</h2>
+    <form action="mailto:mehmetuar@hotmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Mail Address" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+    </form>
+    <div class="social-icons">
+      <a href="https://instagram.com/mehmetuar" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/mehmetuar" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/mehmet-u%C3%A7ar-0a6668308/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mehmet Ucar - Personal Online CV</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      Fully responsive on all tablet devices.
+    </p>
+
+    
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
