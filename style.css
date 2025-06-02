@@ -1,0 +1,574 @@
+:root {
+    --main-bg: #f9f5f0;
+    --primary: #1e1b18;
+    --accent: #00aaf4;
+    --highlight: #14b8a6;
+    --glass-bg: rgba(255, 255, 255, 0.2);
+    --glass-blur: blur(12px);
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--main-bg);
+    color: var(--primary);
+    transition: background-color 0.5s, color 0.5s;
+  }
+  body.dark-mode .edu-card {
+    color: #f9fafb;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Header / Navbar */
+  header {
+    position: relative;
+    background-color: #1c1c1c;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 30px;
+    flex-wrap: wrap;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* ✨ ORTALAR */
+    gap: 35px;
+    margin: 0;
+    padding: 0;
+    width: 100%; /* gerekli */
+  }
+  
+  
+  .nav-links li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  .navbar {
+    flex-grow: 1;
+  }  
+  
+  nav ul {
+    list-style: none;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem;
+    transition: all 0.3s;
+  }
+  
+  nav a:hover {
+    background-color:#14b8a6;
+ 
+  }
+  
+  /* Tema Toggle Butonu */
+  .theme-toggle {
+    background: var(--accent);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+  }
+  .theme-toggle:hover {
+    transform: scale(1.05);
+  }
+  
+  /* CV İndirme Butonu */
+  .cta-cv {
+    position: fixed;
+    top: 6rem;
+    right: 2rem;
+    z-index: 999;
+    background: var(--highlight);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s;
+  }
+  .cta-cv:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Genel Section Ayarları */
+  .section {
+    padding: 4rem 1.5rem;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .text-center {
+    text-align: center;
+  }
+  
+  /* Profil Kutusu */
+  .profile-wrapper {
+    background: linear-gradient(270deg, #afab75, #8ca877, #8dc6a9);
+    background-size: 600% 600%;
+    animation: gradientBackground 15s ease infinite;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+  }
+  
+  @keyframes gradientBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  
+  .profile-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  /* Hakkımda Kutusu */
+  .about-box {
+    background: linear-gradient(135deg, #e0c8a1, #f4ede3);
+
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    animation: wavyMove 12s ease-in-out infinite;
+    background-size: 400% 400%;
+  }
+  
+  @keyframes wavyMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .about-box p, .about-box {
+    color: #333333; /* Sabit koyu gri / siyahımsı */
+  }
+  
+  
+  
+
+ 
+  
+  /* Eğitim Kartları */
+  .edu-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  
+  .edu-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border-radius: 15px;
+    padding: 1.5rem;
+    width: 260px;
+    color: var(--primary);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .edu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  .edu-card i {
+    margin-bottom: 1rem;
+    color: var(--highlight);
+  }
+  
+  /* Yetenekler */
+  .skills-list {
+    margin-top: 3rem;
+  }
+  .skill {
+    margin-bottom: 1.5rem;
+  }
+  .skill-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  .skill-bar {
+    height: 14px;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .skill-bar-fill {
+    height: 100%;
+    background-color: var(--accent);
+    width: 0;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding-left: 0.5rem;
+    line-height: 14px;
+    border-radius: 8px;
+    transition: width 2s ease-out;
+  }
+  
+  /* Form */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 600px;
+    margin: 2rem auto 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  input, textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fff;
+  }
+  
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+  
+  button[type="submit"] {
+    padding: 0.8rem 1.2rem;
+    background-color: var(--highlight);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  button[type="submit"]:hover {
+    transform: scale(1.05);
+  }
+
+
+  
+  
+
+
+  
+  /* Sosyal Medya */
+  .social-icons {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .social-icons a {
+    font-size: 1.8rem;
+    color: var(--primary);
+    transition: color 0.3s, transform 0.3s;
+  }
+  .social-icons a:hover {
+    color: var(--highlight);
+    transform: scale(1.2);
+  }
+  .social-icons a[href*="instagram.com"] {
+    color: #e1306c;
+  }
+  
+  .social-icons a[href*="github.com"] {
+    color: #333;
+  }
+  
+  .social-icons a[href*="linkedin.com"] {
+    color: #0077b5;
+  }
+  
+  body.dark-mode .social-icons a[href*="github.com"] {
+    color: #f5f5f5;
+  }
+  
+  /* dark mode  */
+
+  body.dark-mode {
+    background-color: #111827;
+    color: #f9fafb;
+  }
+  
+  body.dark-mode header,
+  body.dark-mode footer {
+    background-color: #000000;
+    color: white;
+  }
+  
+  body.dark-mode .theme-toggle {
+    background: #2563eb;
+  }
+  
+  body.dark-mode .skill-bar-fill {
+    background-color: #60a5fa;
+  }
+  
+  /*robot */
+  .robot-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -60px;
+    z-index: 1;
+  }
+  
+  .robot-wrapper video {
+    height: 100px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+  .profile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .profile-info h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1px;
+    margin-bottom: 0.1rem;
+  }
+  
+  .profile-info p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.1px;
+  }
+  
+  
+  .robot-home {
+    flex-shrink: 0;
+    margin-left: 2rem;
+  }
+  
+  .robot-home video {
+    height: 130px;
+    object-fit: contain;
+    pointer-events: none;
+  }
+
+  /* indirme butonu animasyonu*/
+  .cv-animation {
+    height: 24px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .cta-cv {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  /* skills arka plan*/
+  #skills {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  #particles-skills {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+
+  /* skills yazısı renk değişimi */
+ .animated-skills {
+  background: linear-gradient(270deg, #afab75, #8ca877, #8dc6a9);
+  background-size: 600% 600%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  animation: gradientText 10s ease infinite;
+  font-weight: bold;
+}
+
+@keyframes gradientText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* dark mode animasyonu*/
+.theme-toggle {
+  background: var(--accent);
+  border: none;
+  padding: 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 48px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+#theme-icon-animation {
+  height: 32px;
+  width: 32px;
+  pointer-events: none;
+  object-fit: contain;
+}
+
+
+/* Logo İsim*/
+.logo-container {
+  position: relative;
+  margin-right: 40px;
+}
+
+.logo-img {
+  height: 60px;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Menü ile çakışmaması için nav'a padding-left verelim */
+nav {
+  padding-left: 100px;
+}
+
+
+/*///////////////////////////////////////////////////////*/
+/* Hamburger başlangıçta gizli */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Masaüstünde logo görünür */
+.desktop-logo {
+  display: block;
+}
+
+/* Mobil görünüm */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .desktop-logo {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #1c1c1c;
+    width: 100%;
+    padding: 10px 30px;
+    gap: 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    padding-left: 0;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+ 
+  /* Footer */
+  footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+  }
+  

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mehmet Ucar - Online CV</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+</head>
+<body>
+
+  <header>
+    <!-- Masaüstü için logo -->
+    <div class="logo-container desktop-logo">
+      <img src="logom12.webp" alt="Mehmet Uçar Logo" class="logo-img">
+    </div>
+  
+    <!-- Mobil için hamburger ikon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      &#9776; <!-- Unicode karakter: ☰ -->
+    </div>
+  
+    <nav class="navbar">
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <button class="theme-toggle" id="theme-toggle">
+      <video id="theme-icon-animation" autoplay loop muted playsinline>
+        <source src="Animation - 1745352394941.webm" type="video/webm">
+        Tarayıcınız video etiketini desteklemiyor.
+      </video>
+    </button>
+    <p id="cv-date" style="position: fixed; top: 10.5rem; right: 2rem; font-size: 0.8rem; color: gray; z-index: 999;"></p>
+    
+    
+    
+  </header>
+
+  <a class="cta-cv" href="cv-dosyam.pdf" download>
+    <span class="cv-text">CV</span>
+    <video class="cv-animation" autoplay loop muted playsinline>
+      <source src="Animation - 1745350106497.webm" type="video/webm">
+      Tarayıcınız video etiketini desteklemiyor.
+    </video> 
+  </a>
+  
+
+  <section id="home" class="section">
+    <div class="profile-wrapper">
+      <img src="foto1 (2).jpg" alt="Profil Fotoğrafı" class="profile-photo">
+  
+      <div class="profile-info">
+        <h1>Mehmet UCAR</h1>
+        <p>Software Engineer</p>
+      </div>
+  
+      <div class="robot-home">
+        <video autoplay loop muted playsinline>
+          <source src="Animation - 1745155253813.webm" type="video/webm">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="about" class="section">
+    <h2 class="text-center">About Me</h2>
+    <div class="about-box">
+      <p> I am a third-year Software Engineering student with a strong interest in Machine Learning, particularly in the field of Computer Vision. My passion for extracting insights from images has led me to explore various Python libraries such as TensorFlow and PyTorch, while experimenting with CNN-based architectures using publicly available datasets. I am currently preparing for an internship in this domain to gain real-world experience and deepen my understanding. I enjoy building models, analyzing visual patterns, and applying AI techniques to solve practical problems—this is where I feel most inspired and motivated. </p>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <h2 class="text-center">Education</h2>
+    <div class="edu-cards">
+      <div class="edu-card">
+        <i class="fa-solid fa-graduation-cap fa-2x"></i>
+        <h3>Halic University</h3>
+        <p>Software Engineer</p>
+        <p>2022 - Active Student</p>
+      </div>
+      <div class="edu-card">
+        <i class="fa-solid fa-school fa-2x"></i>
+        <h3>Metin Civiler Anadolu High School</h3>
+        <p>2017 - 2021</p>
+        <p>Numerical Section</p>
+      </div>
+      <div class="edu-card">
+        <i class="fa-solid fa-book fa-2x"></i>
+        <h3>Middle School</h3>
+        <p>2012 - 2016</p>
+        <p> - </p>
+      </div>
+    </div>
+  </section>
+
+
+
+<section id="skills" class="section">
+  <div id="particles-skills"></div>
+  <h2 class="text-center animated-skills"><strong>S k i l l s </strong></h2>
+
+  <div class="skills-list">
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-html5"></i> HTML</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="90">%90</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-java"></i> Java</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="85">%85</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-css"></i> CSS</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="85">%85</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-js"></i> JavaScript</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="80">%80</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-python"></i> Python</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="60">%60</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-solid fa-c"></i> ++</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="60">%60</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-node"></i> Node.js</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="40">%40</div></div></div>
+      <div class="skill"><div class="skill-label"> <i class="fa-brands fa-php"></i> PHP</div><div class="skill-bar"><div class="skill-bar-fill" data-skill="30">%30</div></div></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="text-center">Contact</h2>
+    <form action="mailto:mehmetuar@hotmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Mail Address" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send</button>
+    </form>
+    <div class="social-icons">
+      <a href="https://instagram.com/mehmetuar" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/mehmetuar" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/mehmet-u%C3%A7ar-0a6668308/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Mehmet Ucar - Personal Online CV</p>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+      Fully responsive on all mobile devices.
+    </p>
+
+    
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById("nav-links");
+      nav.classList.toggle("show");
+    }
+  </script>
+  
+  
+  <script src="script.js"></script>
+</body>
+</html>
